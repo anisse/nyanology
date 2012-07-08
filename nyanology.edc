@@ -30,7 +30,7 @@ collections {
 					state: "anim" 0.0;
 					min: 598 242;
 					image {
-						normal: "cat02.png";
+						tween: "cat02.png";
 						tween: "cat03.png";
 						tween: "cat04.png";
 						tween: "cat05.png";
@@ -40,7 +40,7 @@ collections {
 						tween: "cat09.png";
 						tween: "cat10.png";
 						tween: "cat11.png";
-						tween: "cat12.png";
+						normal: "cat12.png";
 					}
 				}
 			}

@@ -9,5 +9,5 @@ build:
 clean:
 	rm *.edj nyanoplay
 
-play:
+play: build
 	edje_player nyanology.edj
