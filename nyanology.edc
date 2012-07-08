@@ -1,0 +1,67 @@
+
+collections {
+	group {
+		name: "cat";
+		images {
+			image: "cat01.png" COMP;
+			image: "cat02.png" COMP;
+			image: "cat03.png" COMP;
+			image: "cat04.png" COMP;
+			image: "cat05.png" COMP;
+			image: "cat06.png" COMP;
+			image: "cat07.png" COMP;
+			image: "cat08.png" COMP;
+			image: "cat09.png" COMP;
+			image: "cat10.png" COMP;
+			image: "cat11.png" COMP;
+			image: "cat12.png" COMP;
+		}
+		parts {
+			part {
+				name: "cat";
+				description {
+					state: "default" 0.0;
+					min: 598 242;
+					image {
+						normal: "cat01.png";
+					}
+				}
+				description {
+					state: "anim" 0.0;
+					min: 598 242;
+					image {
+						normal: "cat02.png";
+						tween: "cat03.png";
+						tween: "cat04.png";
+						tween: "cat05.png";
+						tween: "cat06.png";
+						tween: "cat07.png";
+						tween: "cat08.png";
+						tween: "cat09.png";
+						tween: "cat10.png";
+						tween: "cat11.png";
+						tween: "cat12.png";
+					}
+				}
+			}
+		}
+		programs {
+			program {
+				name: "anim";
+				signal: "show";
+				action: STATE_SET "anim" 0.0;
+				transition: LINEAR 0.77;
+				target: "cat";
+				after: "loop";
+			}
+			program {
+				name: "loop";
+				action: STATE_SET "default" 0.0;
+				transition: LINEAR 0.07;
+				target: "cat";
+				after: "anim";
+			}
+		}
+	}
+}
+
