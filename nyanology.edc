@@ -33,11 +33,7 @@
 				}
 				description {
 					state: "anim" 0.0;
-					min: 50 20;
-					max: SOURCE;
-					aspect: 2.5 2.5;
-					aspect_preference: VERTICAL;
-					rel1.relative: 5.0 0;
+					inherit: "default";
 					image {
 						tween: "cat02.png";
 						tween: "cat03.png";
