@@ -1,7 +1,8 @@
 
-collections {
+//collections {
 	group {
 		name: "cat";
+		alias: "terminology/cursor";
 		images {
 			image: "cat01.png" COMP;
 			image: "cat02.png" COMP;
@@ -21,14 +22,16 @@ collections {
 				name: "cat";
 				description {
 					state: "default" 0.0;
-					min: 299 121;
+					min: 50 20;
+					rel1.offset: 42 0;
 					image {
 						normal: "cat01.png";
 					}
 				}
 				description {
 					state: "anim" 0.0;
-					min: 299 121;
+					min: 50 20;
+					rel1.offset: 42 0;
 					image {
 						tween: "cat02.png";
 						tween: "cat03.png";
@@ -63,5 +66,5 @@ collections {
 			}
 		}
 	}
-}
+//}
 
