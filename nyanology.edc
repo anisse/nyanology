@@ -22,11 +22,11 @@
 				name: "cat";
 				description {
 					state: "default" 0.0;
-					min: 50 20;
+					min: 0 20;
 					max: SOURCE;
-					aspect: 2.5 2.5;
+					aspect: 2.47 2.47; // aspect from the source image
 					aspect_preference: VERTICAL;
-					rel1.relative: 5.0 0;
+					rel1.relative: 4.5 0;
 					image {
 						normal: "cat01.png";
 					}
