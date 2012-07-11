@@ -1,7 +1,6 @@
 
 //collections {
-	group {
-		name: "cat";
+	group { name: "nyanology/cat";
 		alias: "terminology/cursor";
 		images {
 			image: "cat01.png" COMP;
@@ -19,10 +18,8 @@
 			image: "cr_key.png" COMP;
 		}
 		parts {
-			part {
-				name: "cat";
-				description {
-					state: "default" 0.0;
+			part { name: "cat";
+				description { state: "default" 0.0;
 					min: 0 17;
 					max: SOURCE;
 					aspect: 2.4 2.6; // aspect from the source image
@@ -32,8 +29,7 @@
 						normal: "cat01.png";
 					}
 				}
-				description {
-					state: "anim" 0.0;
+				description { state: "anim" 0.0;
 					inherit: "default";
 					image {
 						tween: "cat02.png";
