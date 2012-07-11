@@ -22,9 +22,9 @@
 				name: "cat";
 				description {
 					state: "default" 0.0;
-					min: 0 20;
+					min: 50 20;
 					max: SOURCE;
-					aspect: 2.47 2.47; // aspect from the source image
+					aspect: 2.4 2.6; // aspect from the source image
 					aspect_preference: VERTICAL;
 					rel1.relative: 4.5 0;
 					image {
