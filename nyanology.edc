@@ -51,20 +51,32 @@
 			}
 		}
 		programs {
-			program {
-				name: "anim";
-				signal: "show";
+			program { name: "anim";
+				signal: "focus,in";
+				source: "terminology";
 				action: STATE_SET "anim" 0.0;
 				transition: LINEAR 0.77;
 				target: "cat";
 				after: "loop";
 			}
-			program {
-				name: "loop";
+			program { name: "loop";
 				action: STATE_SET "default" 0.0;
 				transition: LINEAR 0.07;
 				target: "cat";
 				after: "anim";
+			}
+			program { name: "stop_anim";
+				signal: "focus,out";
+				source: "terminology";
+				action: ACTION_STOP;
+				target: "anim";
+				target: "loop";
+				after: "stop_anim2";
+			}
+			// Is it that important to go back to default state ?
+			program { name: "stop_anim2";
+				action: STATE_SET "default" 0.0;
+				target: "cat";
 			}
 		}
 	}
