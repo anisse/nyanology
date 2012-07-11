@@ -4,14 +4,10 @@ all: build
 
 
 build:
-	edje_cc -id images -id ~/dev/EFL/e17_src/terminology/data/themes/images/ anisse.edc
-
-build2:
-	gcc -o nyanoplay nyanoplay.c `pkg-config --cflags --libs eina evas ecore ecore-evas edje`
-	edje_cc -id images/ nyanology.edc
+	edje_cc -id images -id images-imported-terminology anisse.edc
 
 clean:
-	rm *.edj nyanoplay
+	rm *.edj
 
 play: build
-	edje_player nyanology.edj
+	terminology -t ./anisse.edj
