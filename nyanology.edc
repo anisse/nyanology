@@ -63,6 +63,20 @@
 					rel2.relative: 5.0 1.5;
 					min: 299 121;
 				}
+				description { state: "rotation1" 0.0;
+					inherit: "anim1";
+					map {
+						on: 1;
+						rotation.z: -35.0;
+					}
+				}
+				description { state: "rotation2" 0.0;
+					inherit: "anim2";
+					map {
+						on: 1;
+						rotation.z: 35.0;
+					}
+				}
 			}
 
 			part { name: "key";
@@ -142,8 +156,28 @@
 				transition: DECELERATE 0.3;
 				target: "key";
 			}
-			program { name: "bellbigger1";
+			program { name: "bellrotate1";
 				signal: "bell";
+				source: "terminology";
+				action: STATE_SET "rotation1" 0.0;
+				transition: LINEAR 0.1;
+				target: "cat";
+				after: "bellrotate2";
+			}
+			program { name: "bellrotate2";
+				action: STATE_SET "rotation2" 0.0;
+				transition: LINEAR 0.2;
+				target: "cat";
+				after: "bellrotateend";
+			}
+			program { name: "bellrotateend";
+				action: STATE_SET "default" 0.0;
+				transition: LINEAR 0.1;
+				target: "cat";
+				after: "anim";
+			}
+			program { name: "bellbigger1";
+				signal: "mouse,clicked,*";
 				source: "terminology";
 				action: STATE_SET "default" 0.0;
 				target: "cat";

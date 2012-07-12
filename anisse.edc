@@ -46,13 +46,13 @@ collections {
 		    source: "terminology";
 		    action: STATE_SET "catblue" 0.0;
 		    target: "base";
-		    transition: DECELERATE 0.2;
+		    transition: DECELERATE 0.15;
 		    after: "belling2";
 	    }
 	    program { name: "belling2";
 		    action: STATE_SET "default" 0.0;
 		    target: "base";
-		    transition: ACCELERATE 0.1;
+		    transition: ACCELERATE 0.15;
 	    }
 	 }
          part { name: "terminology.background"; type: SWALLOW;
