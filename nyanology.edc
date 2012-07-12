@@ -45,6 +45,18 @@
 						normal: "cat12.png";
 					}
 				}
+				description { state: "bigger1" 0.0;
+					inherit: "default";
+						 //rel1.relative: 3.0 -1.0;
+						 //rel2.relative: 6.0 2.0;
+						 //min: 299 121;
+				}
+				description { state: "bigger2" 0.0;
+					inherit: "anim";
+					rel1.relative: 4.0 -0.5;
+					rel2.relative: 5.0 1.5;
+					min: 299 121;
+				}
 			}
 
 			part { name: "key";
@@ -123,6 +135,27 @@
 				action: STATE_SET "out" 0.0;
 				transition: DECELERATE 0.3;
 				target: "key";
+			}
+			program { name: "bellbigger1";
+				signal: "bell";
+				source: "terminology";
+				action: STATE_SET "default" 0.0;
+				target: "cat";
+				after: "bellbigger2";
+			}
+			program { name: "bellbigger2";
+				//signal: "bell";
+				//source: "terminology";
+				action: STATE_SET "bigger2" 0.0;
+				transition: DECELERATE 0.3;
+				target: "cat";
+				after: "bellbigger3";
+			}
+			program { name: "bellbigger3";
+				action: STATE_SET "default" 0.0;
+				transition: ACCELERATE 0.1;
+				target: "cat";
+				after: "anim";
 			}
 		}
 	}
