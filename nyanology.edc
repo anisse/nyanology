@@ -29,14 +29,20 @@
 						normal: "cat01.png";
 					}
 				}
-				description { state: "anim" 0.0;
+				description { state: "anim1" 0.0;
 					inherit: "default";
 					image {
+						tween: "cat01.png";
 						tween: "cat02.png";
 						tween: "cat03.png";
 						tween: "cat04.png";
 						tween: "cat05.png";
-						tween: "cat06.png";
+						normal: "cat06.png";
+					}
+				}
+				description { state: "anim2" 0.0;
+					inherit: "default";
+					image {
 						tween: "cat07.png";
 						tween: "cat08.png";
 						tween: "cat09.png";
@@ -52,7 +58,7 @@
 						 //min: 299 121;
 				}
 				description { state: "bigger2" 0.0;
-					inherit: "anim";
+					inherit: "anim2";
 					rel1.relative: 4.0 -0.5;
 					rel2.relative: 5.0 1.5;
 					min: 299 121;
@@ -95,14 +101,14 @@
 			program { name: "anim";
 				signal: "focus,in";
 				source: "terminology";
-				action: STATE_SET "anim" 0.0;
-				transition: LINEAR 0.77;
+				action: STATE_SET "anim1" 0.0;
+				transition: LINEAR 0.42;
 				target: "cat";
 				after: "loop";
 			}
 			program { name: "loop";
-				action: STATE_SET "default" 0.0;
-				transition: LINEAR 0.07;
+				action: STATE_SET "anim2" 0.0;
+				transition: LINEAR 0.42;
 				target: "cat";
 				after: "anim";
 			}
