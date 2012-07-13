@@ -42,7 +42,7 @@ collections {
                color: 0 51 102 255;
             }
 	    program { name: "belling";
-		    signal: "bell";
+		    //signal: "bell";
 		    source: "terminology";
 		    action: STATE_SET "catblue" 0.0;
 		    target: "base";
