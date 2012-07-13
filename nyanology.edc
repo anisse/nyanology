@@ -25,9 +25,8 @@
 					aspect: 2.4 2.6; // aspect from the source image
 					aspect_preference: VERTICAL;
 					rel1.relative: 4.5 0;
-					image {
-						normal: "cat01.png";
-					}
+					image.normal: "cat01.png";
+					map.on: 1;
 				}
 				description { state: "anim1" 0.0;
 					inherit: "default";
@@ -64,18 +63,34 @@
 					min: 299 121;
 				}
 				description { state: "rotation1" 0.0;
-					inherit: "anim1";
-					map {
-						on: 1;
-						rotation.z: -35.0;
+					inherit: "default";
+					image {
+						tween: "cat01.png";
+						tween: "cat02.png";
+						normal: "cat03.png";
 					}
+					map.rotation.z: -35.0;
 				}
 				description { state: "rotation2" 0.0;
-					inherit: "anim2";
-					map {
-						on: 1;
-						rotation.z: 35.0;
+					inherit: "default";
+					image {
+						tween: "cat04.png";
+						tween: "cat05.png";
+						tween: "cat06.png";
+						tween: "cat07.png";
+						tween: "cat08.png";
+						normal: "cat09.png";
 					}
+					map.rotation.z: 35.0;
+				}
+				description { state: "rotation3" 0.0;
+					inherit: "default";
+					image {
+						tween: "cat10.png";
+						tween: "cat11.png";
+						normal: "cat12.png";
+					}
+					map.rotation.z: 0.0;
 				}
 			}
 
@@ -132,6 +147,9 @@
 				action: ACTION_STOP;
 				target: "anim";
 				target: "loop";
+				target: "bellrotate1";
+				target: "bellrotate2";
+				target: "bellrotate3";
 				after: "stop_anim2";
 			}
 			// Is it that important to go back to default state ?
@@ -160,19 +178,19 @@
 				signal: "bell";
 				source: "terminology";
 				action: STATE_SET "rotation1" 0.0;
-				transition: LINEAR 0.1;
+				transition: LINEAR 0.12;
 				target: "cat";
 				after: "bellrotate2";
 			}
 			program { name: "bellrotate2";
 				action: STATE_SET "rotation2" 0.0;
-				transition: LINEAR 0.2;
+				transition: LINEAR 0.24;
 				target: "cat";
-				after: "bellrotateend";
+				after: "bellrotate3";
 			}
-			program { name: "bellrotateend";
-				action: STATE_SET "default" 0.0;
-				transition: LINEAR 0.1;
+			program { name: "bellrotate3";
+				action: STATE_SET "rotation3" 0.0;
+				transition: LINEAR 0.12;
 				target: "cat";
 				after: "anim";
 			}
