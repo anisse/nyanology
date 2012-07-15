@@ -217,7 +217,8 @@
 			}
 		}
 	}
-	group { name: "nyanology/stars";
+	group { name: "nyanology/star";
+#define STAR_SIZE 40
 		images {
 			image: "star_1.png" COMP;
 			image: "star_2.png" COMP;
@@ -229,11 +230,14 @@
 		parts {
 			part { name: "star";
 				description { state: "default" 0.0;
-					min: 140 140;
+					min: STAR_SIZE STAR_SIZE;
+					max: STAR_SIZE STAR_SIZE;
+					fixed: 1 1;
 					fill.smooth: 0;
 					image.normal: "star_1.png";
 					aspect: 1 1;
 					aspect_preference: BOTH;
+					rel1.offset: 6*STAR_SIZE 0.0;
 				}
 				description { state: "anim" 0.0;
 					inherit: "default";
@@ -244,12 +248,18 @@
 						tween: "star_5.png";
 						normal: "star_6.png";
 					}
+					rel1.offset: -6*STAR_SIZE 0.0;
 				}
 			}
 		}
 		programs {
-			program { name: "anim1";
+			program { name: "anim0";
 				signal: "show";
+				in: 0 1.5;
+				after: "anim1";
+			}
+			program { name: "anim1";
+				in: 0.07 0.01;
 				action: STATE_SET "anim" 0.0;
 				target: "star";
 				transition: LINEAR 0.42;
@@ -258,10 +268,31 @@
 			program { name: "anim2";
 				action: STATE_SET "default" 0.0;
 				target: "star";
-				transition: LINEAR 0.07;
 				after: "anim1";
 			}
 		}
 	}
+	group { name: "nyanology/stars";
+		parts{
+			part { name: "starfield";
+				type: BOX;
+				description { state: "default" 0.0;
+					box { layout: "vertical_homogeneous";
+						padding: 0 STAR_SIZE;
+					}
+				}
+				box { items {
+						item { source: "nyanology/star"; }
+						item { source: "nyanology/star"; }
+						item { source: "nyanology/star"; }
+						item { source: "nyanology/star"; }
+						item { source: "nyanology/star"; }
+						item { source: "nyanology/star"; }
+				}
+				}
+			}
+		}
+	}
+#undef STAR_SIZE
 //}
 
