@@ -196,7 +196,7 @@
 			}
 			program { name: "bellbigger1";
 				signal: "mouse,clicked,*";
-				source: "terminology";
+				source: "cat";
 				action: STATE_SET "default" 0.0;
 				target: "cat";
 				after: "bellbigger2";
@@ -294,5 +294,37 @@
 		}
 	}
 #undef STAR_SIZE
+	group { name: "nyanology/nyancat";
+		parts {
+			part { name: "bg";
+				type: RECT;
+				description { state: "default" 0.0;
+					color: 0 51 102 255;
+					min: 400 400;
+				}
+			}
+			part { name: "starfield";
+				type: GROUP;
+				source: "nyanology/stars";
+				description { state: "default" 0.0;
+				}
+			}
+			part { name: "cat";
+				type: GROUP;
+				source: "nyanology/cat";
+				description { state: "default" 0.0;
+					max: 291 121;
+					rel1.relative: -3.5 0 ;
+					map.alpha: 0;
+				}
+			}
+		}
+		programs {
+			program { name: "default";
+				signal: "show";
+				action: SIGNAL_EMIT "focus,in" "terminology";
+			}
+		}
+	}
 //}
 
