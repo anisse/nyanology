@@ -217,111 +217,50 @@
 			}
 		}
 	}
-	group { name: "nyanology/square";
-		parts { part { name: "square";
-				type: RECT;
-				description { state: "default" 0.0;
-					color: 255 255 255 255;
-		} } } }
-	group { name: "nyanology/squareinvisible";
-		parts { part { name: "square";
-				type: RECT;
-				description { state: "default" 0.0;
-					color: 255 255 255 0;
-		} } } }
 	group { name: "nyanology/stars";
+		images {
+			image: "star_1.png" COMP;
+			image: "star_2.png" COMP;
+			image: "star_3.png" COMP;
+			image: "star_4.png" COMP;
+			image: "star_5.png" COMP;
+			image: "star_6.png" COMP;
+		}
 		parts {
-#define TABLEDEF(number) \
-			part { name:"star"number; \
-				type: TABLE; \
-				description { state: "default" 0.0; \
-					table.homogeneous: TABLE; \
-					visible: 1; \
-				} \
-				description { state: "hide" 0.0; \
-					table.homogeneous: TABLE; \
-					visible: 0; \
-				} \
-				table { \
-					items {
-#define RECTANGLE(posx, posy, spanx, spany) \
-						item { \
-							source: "nyanology/square"; \
-							position: posx posy; \
-							span: spanx spany; \
-							min: 20 20; \
-							max: 40 40; \
-							weight: 1 1; \
-						}
-#define SQUARE(posx, posy) RECTANGLE(posx, posy, 1, 1)
-#define TABLEEND \
-						item { \
-							source: "nyanology/squareinvisible"; \
-							position: 6 6; \
-							min: 20 20; \
-							max: 40 40; \
-							weight: 1 1; \
-						} } } }
-
-			TABLEDEF("1")
-						SQUARE(3, 3)
-						RECTANGLE(3, 0, 1, 2)
-						RECTANGLE(0, 3, 2, 1)
-						RECTANGLE(5, 3, 2, 1)
-						RECTANGLE(3, 5, 1, 2)
-			TABLEEND
-			TABLEDEF("2")
-						RECTANGLE(3, 1, 1, 2)
-						RECTANGLE(1, 3, 2, 1)
-						RECTANGLE(4, 3, 2, 1)
-						RECTANGLE(3, 4, 1, 2)
-			TABLEEND
-			/*
-			part { name:"star";
-				type: PROXY;
+			part { name: "star";
 				description { state: "default" 0.0;
-					visible: 1;
-					source: "star1";
+					min: 140 140;
+					fill.smooth: 0;
+					image.normal: "star_1.png";
+					aspect: 1 1;
+					aspect_preference: BOTH;
 				}
-				description { state: "star2" 0.0;
-					visible: 1;
-					source: "star2";
-				}
-			} */
-			programs {
-				program { name: "hello";
-					signal: "show";
-					action: STATE_SET "hide" 0.0;
-					target: "star1";
-					transition: LINEAR 1.0;
+				description { state: "anim" 0.0;
+					inherit: "default";
+					image {
+						tween: "star_2.png";
+						tween: "star_3.png";
+						tween: "star_4.png";
+						tween: "star_5.png";
+						normal: "star_6.png";
+					}
 				}
 			}
-			/*
-			TABLEDEF("1")
-						SQUARE(3, 3)
-						RECTANGLE(3, 0, 1, 2)
-						RECTANGLE(0, 3, 2, 1)
-						RECTANGLE(5, 3, 2, 1)
-						RECTANGLE(3, 5, 1, 2)
-			TABLEEND
-			TABLEDEF("1")
-						SQUARE(3, 3)
-						RECTANGLE(3, 0, 1, 2)
-						RECTANGLE(0, 3, 2, 1)
-						RECTANGLE(5, 3, 2, 1)
-						RECTANGLE(3, 5, 1, 2)
-			TABLEEND
-			TABLEDEF("1")
-						SQUARE(3, 3)
-						RECTANGLE(3, 0, 1, 2)
-						RECTANGLE(0, 3, 2, 1)
-						RECTANGLE(5, 3, 2, 1)
-						RECTANGLE(3, 5, 1, 2)
-			TABLEEND
-			*/
-#undef SQUARE
-#undef RECTANGLE
-#undef TABLEEND
+		}
+		programs {
+			program { name: "anim1";
+				signal: "show";
+				action: STATE_SET "anim" 0.0;
+				target: "star";
+				transition: LINEAR 0.42;
+				after: "anim2";
+			}
+			program { name: "anim2";
+				action: STATE_SET "default" 0.0;
+				target: "star";
+				transition: LINEAR 0.07;
+				after: "anim1";
+			}
 		}
 	}
 //}
