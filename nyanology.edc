@@ -239,39 +239,56 @@
 					aspect_preference: BOTH;
 					rel1.offset: 6*STAR_SIZE 0.0;
 				}
-				description { state: "anim" 0.0;
-					inherit: "default";
-					image {
-						tween: "star_2.png";
-						tween: "star_3.png";
-						tween: "star_4.png";
-						tween: "star_5.png";
-						normal: "star_6.png";
-					}
-					rel1.offset: -6*STAR_SIZE 0.0;
+#define STAR_FRAME(number) \
+				description { state: "anim"#number 0.0; \
+					inherit: "default"; \
+					image.normal: "star_"#number".png"; \
+					rel1.offset: ((5-(number-1))*STAR_SIZE*2) 0.0; \
 				}
+				STAR_FRAME(1)
+				STAR_FRAME(2)
+				STAR_FRAME(3)
+				STAR_FRAME(4)
+				STAR_FRAME(5)
+				STAR_FRAME(6)
+#undef STAR_FRAME
 			}
 		}
 		programs {
-			program { name: "anim0";
-				signal: "show";
-				in: 0 1.5;
-				after: "anim1";
+		/*		signal: "setstar,"#number; \
+				source: "starfield";*/
+#define STAR_PROGRAM(number, next) \
+			program { name: "anim"#number ;\
+				action: STATE_SET "anim"#number 0.0; \
+				transition: LINEAR 0.07; \
+				target: "star"; \
+				after: "anim"#next; \
 			}
-			program { name: "anim1";
-				in: 0.07 0.01;
-				action: STATE_SET "anim" 0.0;
-				target: "star";
-				transition: LINEAR 0.42;
-				after: "anim2";
-			}
-			program { name: "anim2";
-				action: STATE_SET "default" 0.0;
-				target: "star";
-				after: "anim1";
-			}
+			STAR_PROGRAM(1, 2)
+			STAR_PROGRAM(2, 3)
+			STAR_PROGRAM(3, 4)
+			STAR_PROGRAM(4, 5)
+			STAR_PROGRAM(5, 6)
+			STAR_PROGRAM(6, 1)
+#undef STAR_PROGRAM
 		}
 	}
+#define STAR_GROUP(number) \
+	group { name: "nyanology/star"#number; \
+		inherit: "nyanology/star"; \
+		programs { \
+			program { name: "anim"#number; \
+				signal: "show"; \
+			} \
+		} \
+	}
+	STAR_GROUP(1)
+	STAR_GROUP(2)
+	STAR_GROUP(3)
+	STAR_GROUP(4)
+	STAR_GROUP(5)
+	STAR_GROUP(6)
+#undef STAR_GROUP
 	group { name: "nyanology/stars";
 		parts{
 			part { name: "starfield";
@@ -282,12 +299,16 @@
 					}
 				}
 				box { items {
-						item { source: "nyanology/star"; }
-						item { source: "nyanology/star"; }
-						item { source: "nyanology/star"; }
-						item { source: "nyanology/star"; }
-						item { source: "nyanology/star"; }
-						item { source: "nyanology/star"; }
+#define STAR_ITEM(number) \
+						item { name: "star"#number; \
+							source: "nyanology/star"#number; }
+						STAR_ITEM(3)
+						STAR_ITEM(2)
+						STAR_ITEM(5)
+						STAR_ITEM(4)
+						STAR_ITEM(1)
+						STAR_ITEM(6)
+#undef STAR_ITEM
 				}
 				}
 			}
