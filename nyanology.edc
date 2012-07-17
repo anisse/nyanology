@@ -238,13 +238,13 @@
 					image.normal: "star_1.png";
 					aspect: 1 1;
 					aspect_preference: BOTH;
-					rel1.offset: 6*STAR_SIZE 0.0;
+					align: 0 0.5;
 				}
 #define STAR_FRAME(number) \
 				description { state: "anim"#number 0.0; \
 					inherit: "default"; \
 					image.normal: "star_"#number".png"; \
-					rel1.offset: ((5-(number-1))*STAR_SIZE*2) 0.0; \
+					rel1.offset: ((6-(number))*STAR_SIZE*2) 0.0;\
 				}
 				STAR_FRAME(1)
 				STAR_FRAME(2)
@@ -256,19 +256,21 @@
 			}
 		}
 		programs {
-#define STAR_PROGRAM(number, next) \
+#define STAR_PROGRAM(number, next, wait_or_transition) \
 			program { name: "anim"#number ;\
+				wait_or_transition; \
 				action: STATE_SET "anim"#number 0.0; \
-				transition: LINEAR 0.07; \
 				target: "star"; \
 				after: "anim"#next; \
 			}
-			STAR_PROGRAM(1, 2)
-			STAR_PROGRAM(2, 3)
-			STAR_PROGRAM(3, 4)
-			STAR_PROGRAM(4, 5)
-			STAR_PROGRAM(5, 6)
-			STAR_PROGRAM(6, 1)
+			STAR_PROGRAM(1, 2, in: FRAME_DURATION 0)
+#define STAR_PROGRAM2(number, next) STAR_PROGRAM(number, next, transition: SINUSOIDAL FRAME_DURATION)
+			STAR_PROGRAM2(2, 3)
+			STAR_PROGRAM2(3, 4)
+			STAR_PROGRAM2(4, 5)
+			STAR_PROGRAM2(5, 6)
+			STAR_PROGRAM2(6, 1)
+#undef STAR_PROGRAM2
 #undef STAR_PROGRAM
 		}
 	}
@@ -300,6 +302,7 @@
 				box { items {
 #define STAR_ITEM(number) \
 						item { name: "star"#number; \
+							align: 0 0.5;\
 							source: "nyanology/star"#number; }
 						STAR_ITEM(3)
 						STAR_ITEM(2)
