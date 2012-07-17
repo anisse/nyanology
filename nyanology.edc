@@ -1,5 +1,6 @@
 
 //collections {
+#define FRAME_DURATION 0.07
 	group { name: "nyanology/cat";
 		alias: "terminology/cursor";
 		images {
@@ -131,13 +132,13 @@
 				signal: "focus,in";
 				source: "terminology";
 				action: STATE_SET "anim1" 0.0;
-				transition: LINEAR 0.42;
+				transition: LINEAR FRAME_DURATION*6;
 				target: "cat";
 				after: "loop";
 			}
 			program { name: "loop";
 				action: STATE_SET "anim2" 0.0;
-				transition: LINEAR 0.42;
+				transition: LINEAR FRAME_DURATION*6;
 				target: "cat";
 				after: "anim";
 			}
@@ -255,8 +256,6 @@
 			}
 		}
 		programs {
-		/*		signal: "setstar,"#number; \
-				source: "starfield";*/
 #define STAR_PROGRAM(number, next) \
 			program { name: "anim"#number ;\
 				action: STATE_SET "anim"#number 0.0; \
@@ -347,5 +346,6 @@
 			}
 		}
 	}
+#undef FRAME_DURATION
 //}
 
