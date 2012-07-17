@@ -11,3 +11,9 @@ clean:
 
 play: build
 	terminology -t ./anisse.edj
+
+playstars: build
+	edje_player -g nyanology/stars ./anisse.edj
+
+playcat: build
+	edje_player -g nyanology/nyancat ./anisse.edj
