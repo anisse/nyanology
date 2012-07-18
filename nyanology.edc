@@ -339,6 +339,12 @@
 					*/
 	}
 	group { name: "nyanology/nyancat";
+		alias: "terminology/about";
+		styles {
+			style { name: "nyanaboutstyle";
+				base: "font=Nexus font_size=10 color=#fff wrap=word";
+			}
+		}
 		parts {
 			part { name: "bg";
 				type: RECT;
@@ -355,11 +361,36 @@
 			}
 			part { name: "cat";
 				type: GROUP;
-				source: "nyanology/cat";
+				source: "nyanology/catcursor";
 				description { state: "default" 0.0;
 					max: 291 121;
 					rel1.relative: -3.5 0 ;
 					map.alpha: 0;
+				}
+			}
+			part { name: "terminology.text";
+				type: TEXTBLOCK;
+				description { state: "default" 0.0;
+					fixed: 1 1;
+					align: 0.5 0.0;
+					max: 10000 10000;
+					rel1 {
+						relative: 0.08 1.0;
+					}
+					rel2 {
+						relative: 0.97 1.0;
+					}
+					text {
+						style: "nyanaboutstyle";
+						text: "Hello. This text shouldn't appear";
+						min: 0 1;
+					}
+				}
+				description { state: "up" 0.0;
+					inherit: "default" 0.0;
+					align: 0.5 1.0;
+					rel1.relative: 0.08 0.0;
+					rel2.relative: 0.97 0.0;
 				}
 			}
 		}
@@ -367,6 +398,30 @@
 			program { name: "default";
 				signal: "show";
 				action: SIGNAL_EMIT "focus,in" "terminology";
+			}
+			program { name: "begin";
+				signal: "begin";
+				source: "terminology";
+				action: ACTION_STOP;
+				target: "show";
+				target: "show2";
+				after: "begin2";
+			}
+			program { name: "begin2";
+				action: STATE_SET "default" 0.0;
+				target: "terminology.text";
+				after: "show";
+			}
+			program { name: "show";
+				action: STATE_SET "up" 0.0;
+				transition: LINEAR 15.0;
+				target: "terminology.text";
+				after: "show2";
+			}
+			program { name: "show2";
+				action: STATE_SET "default" 0.0;
+				target: "terminology.text";
+				after: "show";
 			}
 		}
 	}

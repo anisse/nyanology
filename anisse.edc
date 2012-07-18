@@ -2208,7 +2208,7 @@ target: "4.bottom"
 
 //////////////////////////////////////////////////////////////////////////////
    //// the about box content image
-   group { name: "terminology/about";
+   group { name: "terminology/aboutorig";
       images {
         image: "ab_base.png" COMP;
         image: "ab_shell.png" COMP;
