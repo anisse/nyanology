@@ -4,16 +4,16 @@ all: build
 
 
 build:
-	edje_cc -id images -id images-imported-terminology anisse.edc
+	edje_cc -id images -id images-imported-terminology nyanology.edc
 
 clean:
 	rm *.edj
 
 play: build
-	terminology -t ./anisse.edj
+	terminology -t ./nyanology.edj
 
 playstars: build
-	edje_player -g nyanology/stars ./anisse.edj
+	edje_player -g nyanology/stars ./nyanology.edj
 
 playcat: build
-	edje_player -g nyanology/nyancat ./anisse.edj
+	edje_player -g nyanology/nyancat ./nyanology.edj
