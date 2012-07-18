@@ -772,20 +772,13 @@ collections {
    // bottomfull:
    // |        ######|
    // |##############|
-#define PATCOL  100 160 255 128
-#define PATCOL2 120 180 255 144
+#define PATCOL  255 255 255 128
 #define OUTCOL  120 220 255 128
 #define OUTCOL2 180 240 255 144
 
    group { name: "terminology/selection";
       images {
-         image: "sl_stripe.png" COMP;
-         image: "sl_left.png" COMP;
-         image: "sl_right.png" COMP;
-         image: "sl_top.png" COMP;
-         image: "sl_bottom.png" COMP;
-         image: "sl_htop.png" COMP;
-         image: "sl_hbottom.png" COMP;
+         image: "select.png" COMP;
       }
       parts {
          // background pattern. duplicated because clips cut out regions of
@@ -795,13 +788,14 @@ collections {
             clip_to: "top_clip";
             description { state: "default" 0.0;
                color: PATCOL;
-               image.normal: "sl_stripe.png";
+               image.normal: "select.png";
+	       fill.smooth:0;
                fill.size.relative: 0.0 0.0;
-               fill.size.offset: 40 40;
+               fill.size.offset: 30 40;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
-               color: PATCOL2;
+	       fill.origin.offset: 15 40;
             }
          }
          part { name: "background_middle";
@@ -809,13 +803,14 @@ collections {
             clip_to: "middle_clip";
             description { state: "default" 0.0;
                color: PATCOL;
-               image.normal: "sl_stripe.png";
+               image.normal: "select.png";
+	       fill.smooth:0;
                fill.size.relative: 0.0 0.0;
-               fill.size.offset: 40 40;
+               fill.size.offset: 30 40;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
-               color: PATCOL2;
+	       fill.origin.offset: 15 40;
             }
          }
          part { name: "background_bottom";
@@ -823,13 +818,13 @@ collections {
             clip_to: "bottom_clip";
             description { state: "default" 0.0;
                color: PATCOL;
-               image.normal: "sl_stripe.png";
+               image.normal: "select.png";
                fill.size.relative: 0.0 0.0;
-               fill.size.offset: 40 40;
+               fill.size.offset: 30 40;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
-               color: PATCOL2;
+	       fill.origin.offset: 15 40;
             }
          }
 
@@ -938,9 +933,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: 2 0;
                }
                color: OUTCOL;
-               image.normal: "sl_left.png";
-               image.border: 0 0 4 4;
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -962,9 +954,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: 0 0;
                }
                color: OUTCOL;
-               image.normal: "sl_right.png";
-               image.border: 0 0 4 4;
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -986,8 +975,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: -1 3;
                }
                color: OUTCOL;
-               image.normal: "sl_htop.png";
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1009,8 +996,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: -1 -1;
                }
                color: OUTCOL;
-               image.normal: "sl_hbottom.png";
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1042,9 +1027,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: 2 0;
                }
                color: OUTCOL;
-               image.normal: "sl_left.png";
-               image.border: 0 0 4 4;
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1066,9 +1048,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: -1 0;
                }
                color: OUTCOL;
-               image.normal: "sl_right.png";
-               image.border: 0 0 4 4;
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1090,8 +1069,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: -1 3;
                }
                color: OUTCOL;
-               image.normal: "sl_htop.png";
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1113,8 +1090,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: -1 -1;
                }
                color: OUTCOL;
-               image.normal: "sl_hbottom.png";
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1135,9 +1110,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: 2 0;
                }
                color: OUTCOL;
-               image.normal: "sl_left.png";
-               image.border: 0 0 4 4;
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1159,9 +1131,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: 0 0;
                }
                color: OUTCOL;
-               image.normal: "sl_right.png";
-               image.border: 0 0 4 4;
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1183,8 +1152,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: -1 3;
                }
                color: OUTCOL;
-               image.normal: "sl_htop.png";
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1206,8 +1173,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: -1 -1;
                }
                color: OUTCOL;
-               image.normal: "sl_hbottom.png";
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1239,8 +1204,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: 2 2;
                }
                color: OUTCOL;
-               image.normal: "sl_top.png";
-               image.border: 0 0 4 7;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1262,8 +1225,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: 3 0;
                }
                color: OUTCOL;
-               image.normal: "sl_bottom.png";
-               image.border: 0 0 7 4;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1284,9 +1245,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: 2 0;
                }
                color: OUTCOL;
-               image.normal: "sl_left.png";
-               image.border: 0 0 4 4;
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1307,9 +1265,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: 0 0;
                }
                color: OUTCOL;
-               image.normal: "sl_right.png";
-               image.border: 0 0 4 4;
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1331,8 +1286,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: -1 3;
                }
                color: OUTCOL;
-               image.normal: "sl_htop.png";
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1354,8 +1307,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: -1 -1;
                }
                color: OUTCOL;
-               image.normal: "sl_htop.png";
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1377,8 +1328,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: -1 -1;
                }
                color: OUTCOL;
-               image.normal: "sl_hbottom.png";
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1400,8 +1349,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: -1 -1;
                }
                color: OUTCOL;
-               image.normal: "sl_hbottom.png";
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1433,8 +1380,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: 3 0;
                }
                color: OUTCOL;
-               image.normal: "sl_bottom.png";
-               image.border: 0 0 7 4;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1455,9 +1400,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: 2 0;
                }
                color: OUTCOL;
-               image.normal: "sl_left.png";
-               image.border: 0 0 4 4;
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1478,9 +1420,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: 0 0;
                }
                color: OUTCOL;
-               image.normal: "sl_right.png";
-               image.border: 0 0 4 4;
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1502,8 +1441,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: -1 3;
                }
                color: OUTCOL;
-               image.normal: "sl_htop.png";
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1525,8 +1462,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: -1 -1;
                }
                color: OUTCOL;
-               image.normal: "sl_hbottom.png";
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1548,8 +1483,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: -1 -1;
                }
                color: OUTCOL;
-               image.normal: "sl_hbottom.png";
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1581,8 +1514,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: 2 2;
                }
                color: OUTCOL;
-               image.normal: "sl_top.png";
-               image.border: 0 0 4 7;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1603,9 +1534,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: 2 0;
                }
                color: OUTCOL;
-               image.normal: "sl_left.png";
-               image.border: 0 0 4 4;
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1625,9 +1553,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: 0 0;
                }
                color: OUTCOL;
-               image.normal: "sl_right.png";
-               image.border: 0 0 4 4;
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1649,8 +1574,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: -1 3;
                }
                color: OUTCOL;
-               image.normal: "sl_htop.png";
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1672,8 +1595,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: -1 -1;
                }
                color: OUTCOL;
-               image.normal: "sl_htop.png";
-               fill.smooth: 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
@@ -1695,8 +1616,6 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
                   offset: -1 -1;
                }
                color: OUTCOL;
-               image.normal: "sl_hbottom.png";
-               fill.smooth: 0;
             }
          }
          program { name: "bottomfull";
@@ -1744,16 +1663,16 @@ target: "4.top"; \
 target: "4.bottom"
 
          program { name: "selpulse";
+	    in: 0.5 0;
             signal: "show";
             source: "";
             action: STATE_SET "pluse" 0.0;
-            transition: SINUSOIDAL 0.5;
             SELPULSE;
             after: "selpulse2";
          }
          program { name: "selpulse2";
+	    in: 0.5 0;
             action: STATE_SET "default" 0.0;
-            transition: SINUSOIDAL 1.0;
             SELPULSE;
             after: "selpulse";
          }
