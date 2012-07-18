@@ -2616,6 +2616,12 @@ target: "4.bottom"
 					min: 400 400;
 				}
 			}
+			part { name: "clip";
+				type: RECT;
+				description { state: "default" 0.0;
+					min: 400 400;
+				}
+			}
 			part { name: "starfield";
 				type: GROUP;
 				source: "nyanology/stars";
@@ -2633,6 +2639,7 @@ target: "4.bottom"
 			}
 			part { name: "terminology.text";
 				type: TEXTBLOCK;
+				clip_to: "clip";
 				description { state: "default" 0.0;
 					fixed: 1 1;
 					align: 0.5 0.0;
