@@ -2208,6 +2208,10 @@ target: "4.bottom"
 					image.normal: "cat01.png";
 					map.on: 1;
 				}
+				description { state: "greyed";
+					inherit: "default";
+					color: 120 120 120 255;
+				}
 				description { state: "anim1" 0.0;
 					inherit: "default";
 					image {
@@ -2334,7 +2338,8 @@ target: "4.bottom"
 			}
 			// Is it that important to go back to default state ?
 			program { name: "stop_anim2";
-				action: STATE_SET "default" 0.0;
+				action: STATE_SET "greyed" 0.0;
+				transition: LINEAR FRAME_DURATION*6;
 				target: "cat";
 			}
 			program { name: "key";
