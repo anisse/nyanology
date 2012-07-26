@@ -8,7 +8,9 @@ How to use ?
 --------
 
 Make sure you have terminology and edje (edje_cc) installed. It's on E's svn.
+
 Run `make play`.
+
 You're done.
 
 
@@ -28,6 +30,6 @@ What's missing ? (TODO)
 
 Credits
 --------
-Anisse Astier <anisse@astier.eu>
-prguitarman for the original nyan cat gif
-saraj00n for making it popular.
+ - Anisse Astier <anisse@astier.eu>
+ - prguitarman for the original nyan cat gif
+ - saraj00n for making it popular and the vocaloid music.
