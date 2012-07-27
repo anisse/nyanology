@@ -31,5 +31,6 @@ What's missing ? (TODO)
 Credits
 --------
  - Anisse Astier <anisse@astier.eu>
+ - Carsten "Rasterman" Haitzler and the Terminology authors
  - prguitarman for the original nyan cat gif
  - saraj00n for making it popular and the vocaloid music.
