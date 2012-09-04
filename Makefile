@@ -5,6 +5,8 @@ all: build
 
 build:
 	edje_cc -id images -id images-imported-terminology nyanology.edc
+buildabout:
+	edje_cc -id images -id images-imported-terminology about.edc
 
 clean:
 	rm *.edj
@@ -17,3 +19,6 @@ playstars: build
 
 playcat: build
 	edje_player -g nyanology/nyancat ./nyanology.edj
+
+playabout: buildabout
+	edje_player -g terminology/about ./about.edj
