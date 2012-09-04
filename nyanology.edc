@@ -915,6 +915,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          // |  #########   |
          part { name: "0.left";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "0.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -936,6 +937,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "0.right";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "0.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -957,6 +959,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "0.top";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "0.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -978,6 +981,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "0.bottom";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "0.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1009,6 +1013,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          // |##            |
          part { name: "1.left";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "1.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1030,6 +1035,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "1.right";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "1.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1051,6 +1057,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "1.top";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "1.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1072,6 +1079,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "1.bottom";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "1.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1093,6 +1101,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "1.left2";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "1.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1113,6 +1122,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "1.right2";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "1.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1134,6 +1144,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "1.top2";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "1.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1155,6 +1166,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "1.bottom2";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "1.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1186,6 +1198,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          // |#########     |
          part { name: "2.topkink";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "2.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1207,6 +1220,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "2.bottomkink";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "2.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1228,6 +1242,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "2.left";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "2.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1248,6 +1263,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "2.right";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "2.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1268,6 +1284,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "2.top";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "2.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1289,6 +1306,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "2.top2";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "2.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1310,6 +1328,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "2.bottom";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "2.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1331,6 +1350,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "2.bottom2";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "2.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1362,6 +1382,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          // |######        |
          part { name: "3.bottomkink";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "3.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1383,6 +1404,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "3.left";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "3.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1403,6 +1425,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "3.right";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "3.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1423,6 +1446,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "3.top";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "3.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1444,6 +1468,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "3.bottom";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "3.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1465,6 +1490,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "3.bottom2";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "3.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1496,6 +1522,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          // |##############|
          part { name: "4.topkink";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "4.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1517,6 +1544,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "4.left";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "4.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1537,6 +1565,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "4.right";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "4.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1556,6 +1585,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "4.top";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "4.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1577,6 +1607,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "4.top2";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "4.clip";
             description { state: "default" 0.0;
                rel1 {
@@ -1598,6 +1629,7 @@ target: "0.clip"; target: "1.clip"; target: "2.clip"; target: "3.clip"; target: 
          }
          part { name: "4.bottom";
             mouse_events: 0;
+	    type: RECT;
             clip_to: "4.clip";
             description { state: "default" 0.0;
                rel1 {
