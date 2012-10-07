@@ -767,7 +767,7 @@ collections {
    // bottomfull:
    // |        ######|
    // |##############|
-#define PATCOL  255 255 255 128
+#define PATCOL  255 255 255 140
 #define OUTCOL  120 220 255 128
 #define OUTCOL2 180 240 255 144
 
@@ -1694,15 +1694,14 @@ target: "4.top"; \
 target: "4.bottom"
 
          program { name: "selpulse";
-	    in: 0.5 0;
             signal: "show";
             source: "";
             action: STATE_SET "pluse" 0.0;
+	    transition: LINEAR 1.0;
             SELPULSE;
             after: "selpulse2";
          }
          program { name: "selpulse2";
-	    in: 0.5 0;
             action: STATE_SET "default" 0.0;
             SELPULSE;
             after: "selpulse";
