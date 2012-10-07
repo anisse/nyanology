@@ -784,13 +784,14 @@ collections {
             description { state: "default" 0.0;
                color: PATCOL;
                image.normal: "select.png";
+	       rel2.to_y: "top_clip";
 	       fill.smooth:0;
-               fill.size.relative: 0.0 0.0;
-               fill.size.offset: 30 40;
+               fill.size.relative: 0.0 1.0;
+               fill.size.offset: 8 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
-	       fill.origin.offset: 15 40;
+	       fill.origin.offset: 16 0;
             }
          }
          part { name: "background_middle";
@@ -799,13 +800,15 @@ collections {
             description { state: "default" 0.0;
                color: PATCOL;
                image.normal: "select.png";
+	       rel1.to_y: "middle_clip";
+	       rel2.to_y: "middle_clip";
 	       fill.smooth:0;
                fill.size.relative: 0.0 0.0;
-               fill.size.offset: 30 40;
+               fill.size.offset: 8 15;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
-	       fill.origin.offset: 15 40;
+	       fill.origin.offset: 16 0;
             }
          }
          part { name: "background_bottom";
@@ -814,12 +817,13 @@ collections {
             description { state: "default" 0.0;
                color: PATCOL;
                image.normal: "select.png";
-               fill.size.relative: 0.0 0.0;
-               fill.size.offset: 30 40;
+	       rel1.to_y: "bottom_clip";
+               fill.size.relative: 0.0 1.0;
+               fill.size.offset: 8 0;
             }
             description { state: "pluse" 0.0;
                inherit: "default" 0.0;
-	       fill.origin.offset: 15 40;
+	       fill.origin.offset: 16 0;
             }
          }
 
