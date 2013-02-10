@@ -90,7 +90,7 @@ collections {
          // actual text grid for chars, cursors, selectiond etc. goes here
          part { name: "terminology.content"; type: SWALLOW;
             description { state: "default" 0.0;
-               rel1.offset: 1 2;
+               rel1.offset: 1 1;
                rel2.offset: -2 -2;
             }
          }
@@ -100,13 +100,12 @@ collections {
          part { name: "bevel";
             mouse_events: 0;
             description { state: "default" 0.0;
-               rel1.offset: 0 0;
+               rel1.offset: 0 -1;
                rel2.offset: -1 -1;
                image.normal: "bg_bevel.png";
                image.border: 3 3 5 3;
                image.middle: 0;
                fill.smooth: 0;
-               visible: 1;
             }
          }
          part { name: "glintclip"; type: RECT;
@@ -123,82 +122,21 @@ collections {
                max: 79 5;
                rel1 {
                   relative: 0.0 0.0;
-                  offset: 0 1;
+                  offset: 0 0;
                }
                rel2 {
                   relative: 1.0 0.0;
-                  offset: -1 1;
+                  offset: -1 0;
                }
                image.normal: "bg_glint.png";
+               color: 255 255 255 128;
+            }
+            description { state: "focused" 0.0;
+               inherit: "default" 0.0;
+               color: 255 255 255 255;
             }
          }
 
-         ////////////////////////////////////////////////////////////////////
-         // a place terminology will place an entry box for internal commands
-         part { name: "cmdclip"; type: RECT;
-            description { state: "default" 0.0;
-               rel1.to: "terminology.cmdbox";
-               rel1.offset: -100 -100;
-               rel2.to: "terminology.cmdbox";
-               rel2.offset: 99 99;
-               color: 255 255 255 0;
-               visible: 0;
-            }
-            description { state: "visible" 0.0;
-               inherit: "default" 0.0;
-               color: 255 255 255 255;
-               visible: 1;
-            }
-         }
-         part { name: "cmdback"; type: RECT;
-            clip_to: "cmdclip";
-            description { state: "default" 0.0;
-               color: 255 255 255 255;
-               rel1.to: "terminology.cmdbox";
-               rel1.offset: -2 -2;
-               rel2.to: "terminology.cmdbox";
-               rel2.offset: 1 1;
-            }
-         }
-         part { name: "terminology.cmdbox"; type: SWALLOW;
-            clip_to: "cmdclip";
-            description { state: "default" 0.0;
-               fixed: 1 1;
-               min: 8 8;
-               rel1.relative: 0.0 1.0;
-               rel1.offset: 8 9;
-               rel2.offset: -9 9;
-               align: 0.5 0.0;
-            }
-            description { state: "visible" 0.0;
-               inherit: "default" 0.0;
-               rel1.offset: 8 -9;
-               rel2.offset: -9 -9;
-               align: 0.5 1.0;
-            }
-         }
-         program { name: "cmdshow0";
-            signal: "cmdbox,show";
-            source: "terminology";
-            action: STATE_SET "visible" 0.0;
-            transition: DECELERATE 0.4;
-            target: "cmdclip";
-         }
-         program { name: "cmdshow";
-            signal: "cmdbox,show";
-            source: "terminology";
-            action: STATE_SET "visible" 0.0;
-            transition: SPRING 0.4 0.5 4;
-            target: "terminology.cmdbox";
-         }
-         program { name: "cmdhide";
-            signal: "cmdbox,hide";
-            source: "terminology";
-            action: STATE_SET "default" 0.0;
-            transition: ACCELERATE 0.5;
-            target: "terminology.cmdbox";
-            target: "cmdclip";
-         }
 
          ////////////////////////////////////////////////////////////////////
          // popup media over the terminal (until dismissed)
@@ -507,6 +445,81 @@ collections {
             target: "popmedia_glint";
             target: "popmedia_glintclip";
             target: "popmedia_shine";
+         }
+      }
+   }
+
+   group { name: "terminology/base";
+      parts {
+         part { name: "terminology.content"; type: SWALLOW;
+            description { state: "default" 0.0;
+            }
+         }
+         ////////////////////////////////////////////////////////////////////
+         // a place terminology will place an entry box for internal commands
+         part { name: "cmdclip"; type: RECT;
+            description { state: "default" 0.0;
+               rel1.to: "terminology.cmdbox";
+               rel1.offset: -100 -100;
+               rel2.to: "terminology.cmdbox";
+               rel2.offset: 99 99;
+               color: 255 255 255 0;
+               visible: 0;
+            }
+            description { state: "visible" 0.0;
+               inherit: "default" 0.0;
+               color: 255 255 255 255;
+               visible: 1;
+            }
+         }
+         part { name: "cmdback"; type: RECT;
+            clip_to: "cmdclip";
+            description { state: "default" 0.0;
+               color: 255 255 255 255;
+               rel1.to: "terminology.cmdbox";
+               rel1.offset: -2 -2;
+               rel2.to: "terminology.cmdbox";
+               rel2.offset: 1 1;
+            }
+         }
+         part { name: "terminology.cmdbox"; type: SWALLOW;
+            clip_to: "cmdclip";
+            description { state: "default" 0.0;
+               fixed: 1 1;
+               min: 8 8;
+               rel1.relative: 0.0 1.0;
+               rel1.offset: 8 9;
+               rel2.offset: -9 9;
+               align: 0.5 0.0;
+            }
+            description { state: "visible" 0.0;
+               inherit: "default" 0.0;
+               rel1.offset: 8 -9;
+               rel2.offset: -9 -9;
+               align: 0.5 1.0;
+            }
+         }
+         program { name: "cmdshow0";
+            signal: "cmdbox,show";
+            source: "terminology";
+            action: STATE_SET "visible" 0.0;
+            transition: DECELERATE 0.4;
+            target: "cmdclip";
+         }
+         program { name: "cmdshow";
+            signal: "cmdbox,show";
+            source: "terminology";
+            action: STATE_SET "visible" 0.0;
+            transition: SPRING 0.4 0.5 4;
+            target: "terminology.cmdbox";
+         }
+         program { name: "cmdhide";
+            signal: "cmdbox,hide";
+            source: "terminology";
+            action: STATE_SET "default" 0.0;
+            transition: ACCELERATE 0.5;
+            target: "terminology.cmdbox";
+            target: "cmdclip";
          }
 
          ////////////////////////////////////////////////////////////////////
@@ -1811,7 +1824,7 @@ target: "4.bottom"
                rel1.offset: -6 0;
                rel1.relative: 0.0 1.0;
                rel2.offset: 5 0;
-               color: 100 200 255 255;
+               color: 51 153 255 255;
                fill.smooth: 0;
             }
          }
@@ -1825,21 +1838,21 @@ target: "4.bottom"
                rel1.relative: 0.0 1.0;
                rel2.offset: 16 -1;
                rel2.relative: 0.0 1.0;
-               color: 100 200 255 0;
+               color: 51 153 255 0;
             }
             description { state: "out" 0.0;
                inherit: "default" 0.0;
                min: 16 16;
                rel1.offset: -10 -1;
                rel2.offset: -10 -1;
-               color: 180 220 255 255;
+               color: 51 153 255 255;
             }
             description { state: "out2" 0.0;
                inherit: "default" 0.0;
                min: 32 32;
                rel1.offset: -26 -1;
                rel2.offset: -26 -1;
-               color: 100 200 255 0;
+               color: 51 153 255 0;
             }
          }
          part { name: "r";
@@ -1852,21 +1865,21 @@ target: "4.bottom"
                rel1.relative: 1.0 1.0;
                rel2.offset: -15 0;
                rel2.relative: 1.0 1.0;
-               color: 100 200 255 0;
+               color: 51 153 255 0;
             }
             description { state: "out" 0.0;
                inherit: "default" 0.0;
                min: 16 16;
                rel1.offset: 9 -1;
                rel2.offset: 9 -1;
-               color: 180 220 255 255;
+               color: 51 153 255 255;
             }
             description { state: "out2" 0.0;
                inherit: "default" 0.0;
                min: 32 32;
                rel1.offset: 25 -1;
                rel2.offset: 25 -1;
-               color: 100 200 255 0;
+               color: 51 153 255 0;
             }
          }
          part { name: "event"; type: RECT;
@@ -1944,7 +1957,7 @@ target: "4.bottom"
                rel1.to: "progress_area";
                rel2.to: "progress_area";
                rel2.relative: 0.0 1.0;
-               color: 100 160 255 255;
+               color: 51 153 255 255;
                image.normal: "media_busy_progress.png";
                image.border: 5 5 0 0;
                min: 10 40;
@@ -1979,7 +1992,7 @@ target: "4.bottom"
             mouse_events: 0;
             description { state: "default" 0.0;
                fixed: 1 1;
-               color: 100 160 255 255;
+               color: 51 153 255 255;
                rel1.to: "knob";
                rel2.to: "knob";
                image.normal: "media_busy_spinner.png";
