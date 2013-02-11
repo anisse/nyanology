@@ -3,6 +3,14 @@ collections {
 //////////////////////////////////////////////////////////////////////////////
    //// the background and general container for the terminal
    group { name: "terminology/background";
+      color_classes {
+        color_class { name: "color-0";  color: 255 255 255 255; } //COL_DEF
+        color_class { name: "color-8";  color: 255 255 255 255; } //COL_WHITE
+        color_class { name: "color-12";  color: 255 255 255 255; } //COL_DEF
+        color_class { name: "color-24";  color: 255 255 255 255; } //COL_DEF
+        color_class { name: "color-32";  color: 255 255 255 255; } //COL_WHITE
+        color_class { name: "256color-7";  color: 255 255 255 255; } //COL_WHITE
+      }
       images {
         image: "bg_bevel.png" COMP;
         image: "bg_shine.png" COMP;
