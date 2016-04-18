@@ -4,9 +4,9 @@ all: build
 
 
 build:
-	edje_cc -id images -id images-imported-terminology nyanology.edc
+	edje_cc -id images -sd sounds -id images-imported-terminology nyanology.edc
 buildabout:
-	edje_cc -id images -id images-imported-terminology about.edc
+	edje_cc -id images -sd sounds -id images-imported-terminology about.edc
 
 clean:
 	rm *.edj

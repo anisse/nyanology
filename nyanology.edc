@@ -19,6 +19,11 @@ collections {
         image: "pm_overlay.png" COMP;
         image: "pm_fill.png" COMP;
       }
+      sounds {
+         sample { name: "nyanya" LOSSY 64;
+            source: "nyanya.wav";
+         }
+      }
       parts {
          ////////////////////////////////////////////////////////////////////
          // background handling
@@ -557,6 +562,10 @@ collections {
             action: STATE_SET "visible" 0.0;
             transition: SPRING 1.2 2.0 6;
             target: "terminology.about";
+         }
+         program {
+            signal: "about,show"; source: "terminology";
+            action: PLAY_SAMPLE "nyanya" 1.0 MUSIC;
          }
          program { name: "ab_hide";
             signal: "about,hide";

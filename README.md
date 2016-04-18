@@ -25,7 +25,6 @@ What's missing ? (TODO)
 --------
  - proper selection. Current one might be fun, but isn't usable
  - stop hacking Terminology's about box, and add our own
- - optional nyan music for the mood
 
 
 Credits
