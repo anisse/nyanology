@@ -20,87 +20,116 @@ collections {
 			image: "cr_key.png" COMP;
 		}
 	      sounds {
-		 sample { name: "nya000" LOSSY 64; source: "nya000.wav"; }
-		 sample { name: "nya001" LOSSY 64; source: "nya001.wav"; }
-		 sample { name: "nya002" LOSSY 64; source: "nya002.wav"; }
-		 sample { name: "nya003" LOSSY 64; source: "nya003.wav"; }
-		 sample { name: "nya004" LOSSY 64; source: "nya004.wav"; }
-		 sample { name: "nya005" LOSSY 64; source: "nya005.wav"; }
-		 sample { name: "nya006" LOSSY 64; source: "nya006.wav"; }
-		 sample { name: "nya007" LOSSY 64; source: "nya007.wav"; }
-		 sample { name: "nya008" LOSSY 64; source: "nya008.wav"; }
-		 sample { name: "nya009" LOSSY 64; source: "nya009.wav"; }
-		 sample { name: "nya010" LOSSY 64; source: "nya010.wav"; }
-		 sample { name: "nya011" LOSSY 64; source: "nya011.wav"; }
-		 sample { name: "nya012" LOSSY 64; source: "nya012.wav"; }
-		 sample { name: "nya013" LOSSY 64; source: "nya013.wav"; }
-		 sample { name: "nya014" LOSSY 64; source: "nya014.wav"; }
-		 sample { name: "nya015" LOSSY 64; source: "nya015.wav"; }
-		 sample { name: "nya016" LOSSY 64; source: "nya016.wav"; }
-		 sample { name: "nya017" LOSSY 64; source: "nya017.wav"; }
-		 sample { name: "nya018" LOSSY 64; source: "nya018.wav"; }
-		 sample { name: "nya019" LOSSY 64; source: "nya019.wav"; }
-		 sample { name: "nya020" LOSSY 64; source: "nya020.wav"; }
-		 sample { name: "nya021" LOSSY 64; source: "nya021.wav"; }
-		 sample { name: "nya022" LOSSY 64; source: "nya022.wav"; }
-		 sample { name: "nya023" LOSSY 64; source: "nya023.wav"; }
-		 sample { name: "nya024" LOSSY 64; source: "nya024.wav"; }
-		 sample { name: "nya025" LOSSY 64; source: "nya025.wav"; }
-		 sample { name: "nya026" LOSSY 64; source: "nya026.wav"; }
-		 sample { name: "nya027" LOSSY 64; source: "nya027.wav"; }
-		 sample { name: "nya028" LOSSY 64; source: "nya028.wav"; }
-		 sample { name: "nya029" LOSSY 64; source: "nya029.wav"; }
-		 sample { name: "nya030" LOSSY 64; source: "nya030.wav"; }
-		 sample { name: "nya031" LOSSY 64; source: "nya031.wav"; }
-		 sample { name: "nya032" LOSSY 64; source: "nya032.wav"; }
-		 sample { name: "nya033" LOSSY 64; source: "nya033.wav"; }
-		 sample { name: "nya034" LOSSY 64; source: "nya034.wav"; }
-		 sample { name: "nya035" LOSSY 64; source: "nya035.wav"; }
-		 sample { name: "nya036" LOSSY 64; source: "nya036.wav"; }
-		 sample { name: "nya037" LOSSY 64; source: "nya037.wav"; }
-		 sample { name: "nya038" LOSSY 64; source: "nya038.wav"; }
-		 sample { name: "nya039" LOSSY 64; source: "nya039.wav"; }
-		 sample { name: "nya040" LOSSY 64; source: "nya040.wav"; }
-		 sample { name: "nya041" LOSSY 64; source: "nya041.wav"; }
-		 sample { name: "nya042" LOSSY 64; source: "nya042.wav"; }
-		 sample { name: "nya043" LOSSY 64; source: "nya043.wav"; }
-		 sample { name: "nya044" LOSSY 64; source: "nya044.wav"; }
-		 sample { name: "nya045" LOSSY 64; source: "nya045.wav"; }
-		 sample { name: "nya046" LOSSY 64; source: "nya046.wav"; }
-		 sample { name: "nya047" LOSSY 64; source: "nya047.wav"; }
-		 sample { name: "nya048" LOSSY 64; source: "nya048.wav"; }
-		 sample { name: "nya049" LOSSY 64; source: "nya049.wav"; }
-		 sample { name: "nya050" LOSSY 64; source: "nya050.wav"; }
-		 sample { name: "nya051" LOSSY 64; source: "nya051.wav"; }
-		 sample { name: "nya052" LOSSY 64; source: "nya052.wav"; }
-		 sample { name: "nya053" LOSSY 64; source: "nya053.wav"; }
-		 sample { name: "nya054" LOSSY 64; source: "nya054.wav"; }
-		 sample { name: "nya055" LOSSY 64; source: "nya055.wav"; }
-		 sample { name: "nya056" LOSSY 64; source: "nya056.wav"; }
-		 sample { name: "nya057" LOSSY 64; source: "nya057.wav"; }
-		 sample { name: "nya058" LOSSY 64; source: "nya058.wav"; }
-		 sample { name: "nya059" LOSSY 64; source: "nya059.wav"; }
-		 sample { name: "nya060" LOSSY 64; source: "nya060.wav"; }
-		 sample { name: "nya061" LOSSY 64; source: "nya061.wav"; }
-		 sample { name: "nya062" LOSSY 64; source: "nya062.wav"; }
-		 sample { name: "nya063" LOSSY 64; source: "nya063.wav"; }
-		 sample { name: "nya064" LOSSY 64; source: "nya064.wav"; }
-		 sample { name: "nya065" LOSSY 64; source: "nya065.wav"; }
-		 sample { name: "nya066" LOSSY 64; source: "nya066.wav"; }
-		 sample { name: "nya067" LOSSY 64; source: "nya067.wav"; }
-		 sample { name: "nya068" LOSSY 64; source: "nya068.wav"; }
-		 sample { name: "nya069" LOSSY 64; source: "nya069.wav"; }
-		 sample { name: "nya070" LOSSY 64; source: "nya070.wav"; }
-		 sample { name: "nya071" LOSSY 64; source: "nya071.wav"; }
-		 sample { name: "nya072" LOSSY 64; source: "nya072.wav"; }
-		 sample { name: "nya073" LOSSY 64; source: "nya073.wav"; }
-		 sample { name: "nya074" LOSSY 64; source: "nya074.wav"; }
-		 sample { name: "nya075" LOSSY 64; source: "nya075.wav"; }
-		 sample { name: "nya076" LOSSY 64; source: "nya076.wav"; }
-		 sample { name: "nya077" LOSSY 64; source: "nya077.wav"; }
+		 sample { name: "nya000" AS_IS; source: "nya000.wav"; }
+		 sample { name: "nya001" AS_IS; source: "nya001.wav"; }
+		 sample { name: "nya002" AS_IS; source: "nya002.wav"; }
+		 sample { name: "nya003" AS_IS; source: "nya003.wav"; }
+		 sample { name: "nya004" AS_IS; source: "nya004.wav"; }
+		 sample { name: "nya005" AS_IS; source: "nya005.wav"; }
+		 sample { name: "nya006" AS_IS; source: "nya006.wav"; }
+		 sample { name: "nya007" AS_IS; source: "nya007.wav"; }
+		 sample { name: "nya008" AS_IS; source: "nya008.wav"; }
+		 sample { name: "nya009" AS_IS; source: "nya009.wav"; }
+		 sample { name: "nya010" AS_IS; source: "nya010.wav"; }
+		 sample { name: "nya011" AS_IS; source: "nya011.wav"; }
+		 sample { name: "nya012" AS_IS; source: "nya012.wav"; }
+		 sample { name: "nya013" AS_IS; source: "nya013.wav"; }
+		 sample { name: "nya014" AS_IS; source: "nya014.wav"; }
+		 sample { name: "nya015" AS_IS; source: "nya015.wav"; }
+		 sample { name: "nya016" AS_IS; source: "nya016.wav"; }
+		 sample { name: "nya017" AS_IS; source: "nya017.wav"; }
+		 sample { name: "nya018" AS_IS; source: "nya018.wav"; }
+		 sample { name: "nya019" AS_IS; source: "nya019.wav"; }
+		 sample { name: "nya020" AS_IS; source: "nya020.wav"; }
+		 sample { name: "nya021" AS_IS; source: "nya021.wav"; }
+		 sample { name: "nya022" AS_IS; source: "nya022.wav"; }
+		 sample { name: "nya023" AS_IS; source: "nya023.wav"; }
+		 sample { name: "nya024" AS_IS; source: "nya024.wav"; }
+		 sample { name: "nya025" AS_IS; source: "nya025.wav"; }
+		 sample { name: "nya026" AS_IS; source: "nya026.wav"; }
+		 sample { name: "nya027" AS_IS; source: "nya027.wav"; }
+		 sample { name: "nya028" AS_IS; source: "nya028.wav"; }
+		 sample { name: "nya029" AS_IS; source: "nya029.wav"; }
+		 sample { name: "nya030" AS_IS; source: "nya030.wav"; }
+		 sample { name: "nya031" AS_IS; source: "nya031.wav"; }
+		 sample { name: "nya032" AS_IS; source: "nya032.wav"; }
+		 sample { name: "nya033" AS_IS; source: "nya033.wav"; }
+		 sample { name: "nya034" AS_IS; source: "nya034.wav"; }
+		 sample { name: "nya035" AS_IS; source: "nya035.wav"; }
+		 sample { name: "nya036" AS_IS; source: "nya036.wav"; }
+		 sample { name: "nya037" AS_IS; source: "nya037.wav"; }
+		 sample { name: "nya038" AS_IS; source: "nya038.wav"; }
+		 sample { name: "nya039" AS_IS; source: "nya039.wav"; }
+		 sample { name: "nya040" AS_IS; source: "nya040.wav"; }
+		 sample { name: "nya041" AS_IS; source: "nya041.wav"; }
+		 sample { name: "nya042" AS_IS; source: "nya042.wav"; }
+		 sample { name: "nya043" AS_IS; source: "nya043.wav"; }
+		 sample { name: "nya044" AS_IS; source: "nya044.wav"; }
+		 sample { name: "nya045" AS_IS; source: "nya045.wav"; }
+		 sample { name: "nya046" AS_IS; source: "nya046.wav"; }
+		 sample { name: "nya047" AS_IS; source: "nya047.wav"; }
+		 sample { name: "nya048" AS_IS; source: "nya048.wav"; }
+		 sample { name: "nya049" AS_IS; source: "nya049.wav"; }
+		 sample { name: "nya050" AS_IS; source: "nya050.wav"; }
+		 sample { name: "nya051" AS_IS; source: "nya051.wav"; }
+		 sample { name: "nya052" AS_IS; source: "nya052.wav"; }
+		 sample { name: "nya053" AS_IS; source: "nya053.wav"; }
+		 sample { name: "nya054" AS_IS; source: "nya054.wav"; }
+		 sample { name: "nya055" AS_IS; source: "nya055.wav"; }
+		 sample { name: "nya056" AS_IS; source: "nya056.wav"; }
+		 sample { name: "nya057" AS_IS; source: "nya057.wav"; }
+		 sample { name: "nya058" AS_IS; source: "nya058.wav"; }
+		 sample { name: "nya059" AS_IS; source: "nya059.wav"; }
+		 sample { name: "nya060" AS_IS; source: "nya060.wav"; }
+		 sample { name: "nya061" AS_IS; source: "nya061.wav"; }
+		 sample { name: "nya062" AS_IS; source: "nya062.wav"; }
+		 sample { name: "nya063" AS_IS; source: "nya063.wav"; }
+		 sample { name: "nya064" AS_IS; source: "nya064.wav"; }
+		 sample { name: "nya065" AS_IS; source: "nya065.wav"; }
+		 sample { name: "nya066" AS_IS; source: "nya066.wav"; }
+		 sample { name: "nya067" AS_IS; source: "nya067.wav"; }
+		 sample { name: "nya068" AS_IS; source: "nya068.wav"; }
+		 sample { name: "nya069" AS_IS; source: "nya069.wav"; }
+		 sample { name: "nya070" AS_IS; source: "nya070.wav"; }
+		 sample { name: "nya071" AS_IS; source: "nya071.wav"; }
+		 sample { name: "nya072" AS_IS; source: "nya072.wav"; }
+		 sample { name: "nya073" AS_IS; source: "nya073.wav"; }
+		 sample { name: "nya074" AS_IS; source: "nya074.wav"; }
+		 sample { name: "nya075" AS_IS; source: "nya075.wav"; }
+		 sample { name: "nya076" AS_IS; source: "nya076.wav"; }
+		 sample { name: "nya077" AS_IS; source: "nya077.wav"; }
 	      }
 	      script {
-		public nya_index;
+		public nya_index, now_playing, atimer, play_queue;
+		public playing_done(val) {
+			new q = get_int(play_queue);
+			new t = get_int(atimer);
+			if (q > 0) {
+				play_next();
+				t = timer(0.35, "playing_done", 1); /* potential timer leak :-/ */
+				set_int(atimer, t); /* leak is here */
+				set_int(play_queue, q - 1);
+			} else {
+				if (t) {
+					cancel_timer(t);
+					set_int(atimer, 0);
+				}
+				set_int(now_playing, 0);
+			}
+		}
+		public play_next() {
+                  new buf[32];
+		  new i = get_int(nya_index);
+		  /* Route around incomplete snprintf, we want %03i */
+		  if (i < 10)
+			  snprintf(buf, 31, "nya00%i", i);
+		  else if (i < 100)
+			  snprintf(buf, 31, "nya0%i", i);
+		  else
+			  snprintf(buf, 31, "nya%i", i);
+		  set_int(nya_index, (i + 1) %78);
+		  play_sample(buf, 1.0);
+		}
 		}
 		parts {
 			part { name: "cat";
@@ -238,97 +267,18 @@ collections {
             program {
                signal: "key,down"; source: "terminology";
                script {
-#if (EFL_VERSION_MAJOR > 1) || (EFL_VERSION_MINOR >= 8)
-                  new buf[32];
-                  snprintf(buf, 31, "key-down%i", get_int(nya_index));
-		  set_int(nya_index, (get_int(nya_index) + 1) %78);
-                  run_program(get_program_id(buf));
-#else
-                  run_program(PROGRAM:"key-down004"); // chosen by a fair dice roll
-                                                    // guaranteed to be random.
-                                                    // http://xkcd.com/221/
-#endif
+		if (get_int(now_playing) == 0) {
+			new tim;
+			play_next()
+			set_int(now_playing, 1);
+			tim = timer(0.35, "playing_done", 1);
+			set_int(atimer, tim);
+		} else {
+			/* no mutex yolo */
+			set_int(play_queue, get_int(play_queue) + 1);
+		}
                }
             }
-            program { name: "key-down0"; action: PLAY_SAMPLE "nya000" 1.0 INPUT; }
-            program { name: "key-down1"; action: PLAY_SAMPLE "nya001" 1.0 INPUT; }
-            program { name: "key-down2"; action: PLAY_SAMPLE "nya002" 1.0 INPUT; }
-            program { name: "key-down3"; action: PLAY_SAMPLE "nya003" 1.0 INPUT; }
-            program { name: "key-down4"; action: PLAY_SAMPLE "nya004" 1.0 INPUT; }
-            program { name: "key-down5"; action: PLAY_SAMPLE "nya005" 1.0 INPUT; }
-            program { name: "key-down6"; action: PLAY_SAMPLE "nya006" 1.0 INPUT; }
-            program { name: "key-down7"; action: PLAY_SAMPLE "nya007" 1.0 INPUT; }
-            program { name: "key-down8"; action: PLAY_SAMPLE "nya008" 1.0 INPUT; }
-            program { name: "key-down9"; action: PLAY_SAMPLE "nya009" 1.0 INPUT; }
-            program { name: "key-down10"; action: PLAY_SAMPLE "nya010" 1.0 INPUT; }
-            program { name: "key-down11"; action: PLAY_SAMPLE "nya011" 1.0 INPUT; }
-            program { name: "key-down12"; action: PLAY_SAMPLE "nya012" 1.0 INPUT; }
-            program { name: "key-down13"; action: PLAY_SAMPLE "nya013" 1.0 INPUT; }
-            program { name: "key-down14"; action: PLAY_SAMPLE "nya014" 1.0 INPUT; }
-            program { name: "key-down15"; action: PLAY_SAMPLE "nya015" 1.0 INPUT; }
-            program { name: "key-down16"; action: PLAY_SAMPLE "nya016" 1.0 INPUT; }
-            program { name: "key-down17"; action: PLAY_SAMPLE "nya017" 1.0 INPUT; }
-            program { name: "key-down18"; action: PLAY_SAMPLE "nya018" 1.0 INPUT; }
-            program { name: "key-down19"; action: PLAY_SAMPLE "nya019" 1.0 INPUT; }
-            program { name: "key-down20"; action: PLAY_SAMPLE "nya020" 1.0 INPUT; }
-            program { name: "key-down21"; action: PLAY_SAMPLE "nya021" 1.0 INPUT; }
-            program { name: "key-down22"; action: PLAY_SAMPLE "nya022" 1.0 INPUT; }
-            program { name: "key-down23"; action: PLAY_SAMPLE "nya023" 1.0 INPUT; }
-            program { name: "key-down24"; action: PLAY_SAMPLE "nya024" 1.0 INPUT; }
-            program { name: "key-down25"; action: PLAY_SAMPLE "nya025" 1.0 INPUT; }
-            program { name: "key-down26"; action: PLAY_SAMPLE "nya026" 1.0 INPUT; }
-            program { name: "key-down27"; action: PLAY_SAMPLE "nya027" 1.0 INPUT; }
-            program { name: "key-down28"; action: PLAY_SAMPLE "nya028" 1.0 INPUT; }
-            program { name: "key-down29"; action: PLAY_SAMPLE "nya029" 1.0 INPUT; }
-            program { name: "key-down30"; action: PLAY_SAMPLE "nya030" 1.0 INPUT; }
-            program { name: "key-down31"; action: PLAY_SAMPLE "nya031" 1.0 INPUT; }
-            program { name: "key-down32"; action: PLAY_SAMPLE "nya032" 1.0 INPUT; }
-            program { name: "key-down33"; action: PLAY_SAMPLE "nya033" 1.0 INPUT; }
-            program { name: "key-down34"; action: PLAY_SAMPLE "nya034" 1.0 INPUT; }
-            program { name: "key-down35"; action: PLAY_SAMPLE "nya035" 1.0 INPUT; }
-            program { name: "key-down36"; action: PLAY_SAMPLE "nya036" 1.0 INPUT; }
-            program { name: "key-down37"; action: PLAY_SAMPLE "nya037" 1.0 INPUT; }
-            program { name: "key-down38"; action: PLAY_SAMPLE "nya038" 1.0 INPUT; }
-            program { name: "key-down39"; action: PLAY_SAMPLE "nya039" 1.0 INPUT; }
-            program { name: "key-down40"; action: PLAY_SAMPLE "nya040" 1.0 INPUT; }
-            program { name: "key-down41"; action: PLAY_SAMPLE "nya041" 1.0 INPUT; }
-            program { name: "key-down42"; action: PLAY_SAMPLE "nya042" 1.0 INPUT; }
-            program { name: "key-down43"; action: PLAY_SAMPLE "nya043" 1.0 INPUT; }
-            program { name: "key-down44"; action: PLAY_SAMPLE "nya044" 1.0 INPUT; }
-            program { name: "key-down45"; action: PLAY_SAMPLE "nya045" 1.0 INPUT; }
-            program { name: "key-down46"; action: PLAY_SAMPLE "nya046" 1.0 INPUT; }
-            program { name: "key-down47"; action: PLAY_SAMPLE "nya047" 1.0 INPUT; }
-            program { name: "key-down48"; action: PLAY_SAMPLE "nya048" 1.0 INPUT; }
-            program { name: "key-down49"; action: PLAY_SAMPLE "nya049" 1.0 INPUT; }
-            program { name: "key-down50"; action: PLAY_SAMPLE "nya050" 1.0 INPUT; }
-            program { name: "key-down51"; action: PLAY_SAMPLE "nya051" 1.0 INPUT; }
-            program { name: "key-down52"; action: PLAY_SAMPLE "nya052" 1.0 INPUT; }
-            program { name: "key-down53"; action: PLAY_SAMPLE "nya053" 1.0 INPUT; }
-            program { name: "key-down54"; action: PLAY_SAMPLE "nya054" 1.0 INPUT; }
-            program { name: "key-down55"; action: PLAY_SAMPLE "nya055" 1.0 INPUT; }
-            program { name: "key-down56"; action: PLAY_SAMPLE "nya056" 1.0 INPUT; }
-            program { name: "key-down57"; action: PLAY_SAMPLE "nya057" 1.0 INPUT; }
-            program { name: "key-down58"; action: PLAY_SAMPLE "nya058" 1.0 INPUT; }
-            program { name: "key-down59"; action: PLAY_SAMPLE "nya059" 1.0 INPUT; }
-            program { name: "key-down60"; action: PLAY_SAMPLE "nya060" 1.0 INPUT; }
-            program { name: "key-down61"; action: PLAY_SAMPLE "nya061" 1.0 INPUT; }
-            program { name: "key-down62"; action: PLAY_SAMPLE "nya062" 1.0 INPUT; }
-            program { name: "key-down63"; action: PLAY_SAMPLE "nya063" 1.0 INPUT; }
-            program { name: "key-down64"; action: PLAY_SAMPLE "nya064" 1.0 INPUT; }
-            program { name: "key-down65"; action: PLAY_SAMPLE "nya065" 1.0 INPUT; }
-            program { name: "key-down66"; action: PLAY_SAMPLE "nya066" 1.0 INPUT; }
-            program { name: "key-down67"; action: PLAY_SAMPLE "nya067" 1.0 INPUT; }
-            program { name: "key-down68"; action: PLAY_SAMPLE "nya068" 1.0 INPUT; }
-            program { name: "key-down69"; action: PLAY_SAMPLE "nya069" 1.0 INPUT; }
-            program { name: "key-down70"; action: PLAY_SAMPLE "nya070" 1.0 INPUT; }
-            program { name: "key-down71"; action: PLAY_SAMPLE "nya071" 1.0 INPUT; }
-            program { name: "key-down72"; action: PLAY_SAMPLE "nya072" 1.0 INPUT; }
-            program { name: "key-down73"; action: PLAY_SAMPLE "nya073" 1.0 INPUT; }
-            program { name: "key-down74"; action: PLAY_SAMPLE "nya074" 1.0 INPUT; }
-            program { name: "key-down75"; action: PLAY_SAMPLE "nya075" 1.0 INPUT; }
-            program { name: "key-down76"; action: PLAY_SAMPLE "nya076" 1.0 INPUT; }
-            program { name: "key-down77"; action: PLAY_SAMPLE "nya077" 1.0 INPUT; }
-
 			program { name: "key";
 				signal: "key,down";
 				source: "terminology";
